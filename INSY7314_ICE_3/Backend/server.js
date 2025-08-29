@@ -1,8 +1,11 @@
 import express from "express";
+import cors from "cors";
 import { connect } from "./Db/db.js";
 import taskEndpoints from "./Models/tasks.js";
 
+
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 const port = 5000;
